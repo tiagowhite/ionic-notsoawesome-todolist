@@ -1,0 +1,17 @@
+<ion-grid>
+    <ion-row align-items-center>
+        <ion-col>
+            <ion-segment color="medium" (ionChange)="segmentChanged($event)">
+                <ion-segment-button checked value="all">
+                    <ion-label>Todos</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="active">
+                    <ion-label>Ativos</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="completed">
+                    <ion-label>Concluídos</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-col>
+    </ion-row>
+</ion-grid>
