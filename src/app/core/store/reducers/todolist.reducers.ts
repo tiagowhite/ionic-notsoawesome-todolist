@@ -12,10 +12,17 @@ export const todolistReducers = (
         todolist: [...state.todolist, action.payload]
       };
     }
-    case ETodoListActions.GetTodo: {
+
+    case ETodoListActions.GetTodos: {
       return {
         ...state,
-        filter: true
+        todolist: [...state.todolist]
+      };
+    }
+
+    case ETodoListActions.GetTodosSuccess: {
+      return {
+        ...state
       };
     }
   }

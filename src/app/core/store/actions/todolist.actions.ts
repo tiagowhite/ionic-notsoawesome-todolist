@@ -4,8 +4,7 @@ import { ITodo } from '../../models/todo.interface';
 export enum ETodoListActions {
   AddTodo = '[Todo] Add Todo',
   GetTodos = '[Todos] Get Todos with filter',
-  GetAllTodos = '[Todos] Get All Todos',
-  GetActiveTodos = '[Todos] Get Active Todos',
+  GetTodosSuccess = '[Todos] Get Todos Success',
   GetTodo = '[Todos] Get one Todo',
   SetTodoAsDone = '[Todos] Set Todo as done',
   SetTodoAsNotDone = '[Todos] Set todo as not done',
@@ -21,13 +20,9 @@ export class GetTodos implements Action {
   public readonly type = ETodoListActions.GetTodos;
 }
 
-
-export class GetAllTodos implements Action {
-  public readonly type = ETodoListActions.GetAllTodos;
-}
-
-export class GetActiveTodos implements Action {
-  public readonly type = ETodoListActions.GetActiveTodos;
+export class GetTodosSuccess implements Action {
+  public readonly type = ETodoListActions.GetTodosSuccess;
+  constructor(public payload: ITodo[]) { }
 }
 
 export class GetTodo implements Action {
@@ -49,8 +44,7 @@ export class RemoveTodo implements Action {
 export type TodolistActions =
   AddTodo
   | GetTodos
-  | GetAllTodos
-  | GetActiveTodos
+  | GetTodosSuccess
   | GetTodo
   | SetTodoAsDone
   | SetTodoAsNotDone

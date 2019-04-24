@@ -16,6 +16,10 @@ import { environment } from '../environments/environment';
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { TodolistService } from './core/services/todolist.service';
+import { TodoEffects } from './core/store/effects/todo.effects';
+import { EffectsModule } from '@ngrx/effects';
+import { HttpClientModule } from '@angular/common/http';
 registerLocaleData(localePt, 'pt');
 
 @NgModule({
@@ -25,12 +29,15 @@ registerLocaleData(localePt, 'pt');
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    HttpClientModule,
+    EffectsModule.forRoot([TodoEffects]),
     StoreModule.forRoot(appReducers),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    TodolistService,
     {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
     {provide: LOCALE_ID, useValue: 'pt'}
   ],

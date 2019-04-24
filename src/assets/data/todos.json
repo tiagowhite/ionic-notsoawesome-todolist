@@ -1,0 +1,25 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "task": "Comprar ovos",
+      "completed": false,
+      "created_at": 1556063313785,
+      "completed_at": 1556063313785
+    },
+    {
+      "id": "2",
+      "task": "Estudar NgRx",
+      "completed": false,
+      "created_at": 1556063313785,
+      "completed_at": 1556063313785
+    },
+    {
+      "id": "3",
+      "task": "Pegar roupa na lavanderia",
+      "completed": true,
+      "created_at": 1556063313785,
+      "completed_at": 1556063313785
+    }
+  ]
+}
