@@ -1,6 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TodolistService} from '../core/services/todolist.service';
-import {ITodo} from '../core/models/todo.interface';
 import { IAppState } from '../core/store/state/app.state';
 import { Store } from '@ngrx/store';
 import { GetTodos } from '../core/store/actions/todolist.actions';
