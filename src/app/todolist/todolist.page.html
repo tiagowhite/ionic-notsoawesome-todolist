@@ -16,7 +16,7 @@
                     </ion-card-header>
                     <ion-card-content>
                         <ion-list>
-                            <todo-item *ngFor="let todo of todoList" [item]="todo"></todo-item>
+                            <todo-item [todoList]="todolist$ | async"></todo-item>
                         </ion-list>
                         <ion-note>
                             <todo-controls (controlEvent)="listSegmentChangeHandler($event)"></todo-controls>

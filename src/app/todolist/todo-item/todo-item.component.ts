@@ -7,7 +7,7 @@ import { ITodo } from '../../core/models/todo.interface';
   styleUrls: ['./todo-item.component.scss'],
 })
 export class TodoItemComponent implements OnInit {
-  @Input() item: ITodo;
+  @Input() todoList: Array<ITodo>;
 
   constructor() {
   }
@@ -16,9 +16,9 @@ export class TodoItemComponent implements OnInit {
   }
 
   setStyle() {
-    return {
+    /*return {
       'text-decoration': this.item.completed ? 'line-through' : 'none'
-    };
+    };*/
   }
 
 }

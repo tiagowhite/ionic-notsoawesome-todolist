@@ -2,12 +2,12 @@ import { IConfigState, initialConfigState } from './config.state';
 import { initialTodolistState, ITodolistState } from './ITodolistState';
 
 export interface IAppState {
-  todo: ITodolistState;
+  todoList: ITodolistState;
   config: IConfigState;
 }
 
 export const initialAppState: IAppState = {
-  todo: initialTodolistState,
+  todoList: initialTodolistState,
   config: initialConfigState
 };
 
