@@ -14,7 +14,7 @@ export class GetTodos implements Action {
 
 export class GetTodosSuccess implements Action {
   public readonly type = ETodoListActions.GetTodosSuccess;
-  constructor(public payload: ITodo[]) {}
+  constructor(public payload: Array<ITodo>) {}
 }
 
 export class GetTodo implements Action {

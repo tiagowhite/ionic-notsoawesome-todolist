@@ -20,7 +20,7 @@ export class TodolistPage implements OnInit {
   }
 
   listSegmentChangeHandler(type: string) {
-    // this.todoListFilterControl = type['detail'].value;
-    // this._store.dispatch(new GetTodos(true));
+    /*this.todoListFilterControl = type['detail'].value;
+    this._store.dispatch(new GetTodos(true));*/
   }
 }

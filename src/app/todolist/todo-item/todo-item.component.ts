@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ITodo } from '../../core/models/todo.interface';
+import { ITodoHttp } from '../../core/models/todo-http.interface';
 
 @Component({
   selector: 'todo-item',
@@ -7,7 +8,7 @@ import { ITodo } from '../../core/models/todo.interface';
   styleUrls: ['./todo-item.component.scss'],
 })
 export class TodoItemComponent implements OnInit {
-  @Input() todoList: Array<ITodo>;
+  @Input() todoList: ITodoHttp;
 
   constructor() {
   }

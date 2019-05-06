@@ -9,13 +9,13 @@ import { environment } from '../../../environments/environment';
 })
 export class TodolistService {
 
-  todoApiUrl = `${environment.apiUrl}todos.json`;
+  private todoApiUrl = `${environment.apiUrl}todos`;
 
   constructor(private _http: HttpClient) {
     console.log(this.todoApiUrl);
   }
 
-  getTodos(): Observable<ITodoHttp> {
+  public getTodos(): Observable<ITodoHttp> {
     return this._http.get<ITodoHttp>(this.todoApiUrl);
   }
 
